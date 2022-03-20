@@ -13,30 +13,30 @@
 <body>
     <header class="pageHeader">
         <div class="pageHeader__top">
-            <h1 class="pageHeader__top--title">Jlopcuns</h1>
-            <div class="pageHeader__top--lang" id="langChanger">
+            <h1 class="pageHeader__top--title" data-animation="left">Jlopcuns</h1>
+            <div class="pageHeader__top--lang" id="langChanger" data-animation="left">
                 <img src="assets/spain.webp" alt="spainLogo" class="pageHeader__top--lang__icon" data-lang="es">
                 <img src="assets/united-kingdom.webp" alt="unitedKingdomLogo" class="pageHeader__top--lang__icon" data-lang="en">
             </div>
         </div>
         <div class="pageHeader__bottom" id="pageHeader__bottom">
-            <img src="assets/jlop-logo-computer.webp" alt="jlop-on-computer" class="pageHeader__bottom--image">
-            <div class="pageHeader__bottom--animateWrapper" id="animationWrapper">
+            <img src="assets/jlop-logo-computer.webp" alt="jlop-on-computer" class="pageHeader__bottom--image" data-animation="left">
+            <div class="pageHeader__bottom--animateWrapper" id="animationWrapper" data-animation="right">
                 <h2 class="pageHeader__bottom--animateWrapper__title" id="writingAnimation">I'm Jlopcuns</h2>
             </div>
         </div>
         <nav class="pageHeader__nav">
             <h2 class="pageHeader__nav--title" data-text="navTitle">CONTENT</h2>
             <ul class="pageHeader__nav--wrapper1">
-                <li class="pageHeader__nav--ul__li" data-text="navUlLi1">About Me</li>
-                <li class="pageHeader__nav--ul__li" data-text="navUlLi2">Abilities</li>
+                <li class="pageHeader__nav--ul__li orange" data-text="navUlLi1" data-animation="left">About Me</li>
+                <li class="pageHeader__nav--ul__li yellow" data-text="navUlLi2" data-animation="right">Abilities</li>
             </ul>
             <ul class="pageHeader__nav--wrapper2">
-                <li class="pageHeader__nav--ul__li" data-text="navUlLi3">Contact</li>
-                <li class="pageHeader__nav--ul__li" data-text="navUlLi4">Projects</li>
+                <li class="pageHeader__nav--ul__li blue" data-text="navUlLi3" data-animation="left">Contact</li>
+                <li class="pageHeader__nav--ul__li pink" data-text="navUlLi4" data-animation="right">Projects</li>
             </ul>
         </nav>
     </header>
-    <script src="public/main.js"></script>
+    <script src="public/main.js" type="module"></script>
 </body>
 </html>

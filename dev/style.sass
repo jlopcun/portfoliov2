@@ -2,10 +2,11 @@
 :root
     --animationActual: moveAnimation 2s steps(12) forwards
     --animationDelay:1s
-$mainColors : ("lightDark":#2d2d2d,"jsYellow":#ffdf00,"cssBlue":#3c99dc,"htmlOrange":#fc7f03,)
+$mainColors : ("lightDark":#2d2d2d,"jsYellow":#ffdf00,"cssBlue":#3c99dc,"htmlOrange":#fc7f03, "sassPink":#ce508e)
 $bebasNeue:  'Bebas Neue', cursive
 $ptSans:  'PT Sans', sans-serif
 $robotMono:  'Roboto Mono', monospace
+$hexaPath : polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
 %flexRowLayout
     display: flex
     justify-content: center
@@ -24,90 +25,148 @@ body
     margin:0
     background-color: map.get($mainColors,"lightDark")
     font-family: $ptSans
+    overflow-x: hidden
+
 .pageHeader
     width: 100%
-    &__top
-        @extend %flexRowLayout
-        justify-content: flex-start
-        &--title
-            @extend %flexRowLayout
-            position: relative
-            width: 10rem
-            margin: 1.5rem 
-            color: #fff
-            font:
-                family: $bebasNeue
-                size: 2rem
-            letter-spacing: .1rem
-            &::after
-                content: 'J'
-                @extend %flexRowLayout
-                width: 2rem
-                height: 1.6rem
-                background-color: map.get($mainColors,"jsYellow")
-                color:#000
-                font-size:.7em
-                clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)
-            &::before
-                content: ''
-                position: absolute
-                bottom: 0 
-                width:90%
-                height: 3px
-                background-color: map.get($mainColors,"jsYellow")
-        &--lang
-            display: inline-block
-            &__icon
-                width:2rem
-                cursor: pointer
-                margin: .3rem
-                transition: transform .2s
-                &:hover
-                    transform: scale(.8)
-    &__bottom
-        @extend %flexRowLayout
-        width:100%
-        margin-top:2.5rem
-        padding:1rem
-        &--image
-            width: 20rem
-        &--animateWrapper
-            width: max(30% , 30rem)
-            overflow: hidden
-            text-align: center
-            &__title
-                position: relative
-                display: inline
-                overflow-wrap: normal
-                font:
-                    family:$robotMono
-                    size:2rem
-                color:#fff
-                &::after
-                    content:''
-                    position: absolute
-                    left: 0 
-                    display: inline-block
-                    width:100%
-                    height:100%
-                    border-left:5px solid #fff
-                    background-color: map-get($mainColors,"lightDark")
-                    animation: var(--animationActual)
-                    animation-delay: var(--animationDelay)
-                    
     
-                // &::before
-                //     $calcWidth:calc(100% - 5px)
-                //     content:''
-                //     position: absolute
-                //     left: 5px 
-                //     display: inline-block
-                //     width: 100%
-                //     height:100%
-                //     background-color: map-get($mainColors,"lightDark")
-                //     animation: var(--animationActual)
-                //     animation-delay: var(--animationDelay)
-                    
+.pageHeader__top
+    @extend %flexRowLayout
+    justify-content: flex-start
+    &--title
+        @extend %flexRowLayout
+        position: relative
+        width: 10rem
+        margin: 1.5rem 
+        color: #fff
+        font:
+            family: $bebasNeue
+            size: 2rem
+        letter-spacing: .1rem
+        &::after
+            content: 'J'
+            @extend %flexRowLayout
+            width: 2rem
+            height: 2rem
+            background-color: map.get($mainColors,"jsYellow")
+            color:#000
+            font-size:.7em
+            clip-path: $hexaPath
+        &::before
+            content: ''
+            position: absolute
+            bottom: 0 
+            width:90%
+            height: 3px
+            background-color: map.get($mainColors,"jsYellow")
+    &--lang
+        display: inline-block
+        &__icon
+            width:2rem
+            cursor: pointer
+            margin: .3rem
+            transition: transform .2s
+            &:hover
+                    transform: scale(.8)
+.pageHeader__bottom
+    @extend %flexRowLayout
+    width:100%
+    margin-top:2.5rem
+    padding:1rem
+    &--image
+        width: 20rem
+    &--animateWrapper
+        width: max(30% , 30rem)
+        overflow: hidden
+        text-align: center
+        &__title
+            position: relative
+            display: inline
+            overflow-wrap: normal
+            font:
+                family:$robotMono
+                size:2rem
+            color:#fff
+            &::after
+                content:''
+                position: absolute
+                left: 0 
+                display: inline-block
+                width:100%
+                height:100%
+                border-left:5px solid #fff
+                background-color: map-get($mainColors,"lightDark")
+                animation: var(--animationActual)
+                animation-delay: var(--animationDelay)
+
+%ulWrapper
+    @extend %flexRowLayout
+    width: 100%
+    gap:2rem
+    padding:0
+.pageHeader__nav
+    @extend %flexColumnLayout
+    position: relative
+    width: 100%
+    &--title
+        position: relative
+        font:
+            family: $bebasNeue
+            size: 3rem
+        color: #fff
+        letter-spacing: .2rem
+        &::before
+            content:''
+            position: absolute
+            left: -.5rem
+            display: inline-block
+            width: 5px
+            height:80%
+            background-color: map.get($mainColors, "jsYellow")
+    &--wrapper1
+        @extend %ulWrapper
+        justify-content: space-evenly
+    &--wrapper2
+        @extend %ulWrapper
+        justify-content: center
+.orange
+    background-color: map.get($mainColors,"htmlOrange")
+.blue
+    background-color: map.get($mainColors,"cssBlue")
+.yellow
+    background-color: map.get($mainColors,"jsYellow")
+.pink
+    background-color: map.get($mainColors,"sassPink")
+ 
+.pageHeader__nav--ul__li
+    @extend %flexRowLayout
+    width: 18rem
+    height: 18rem
+    margin:0
+    clip-path: $hexaPath
+    list-style: none
+    font:
+        family: $bebasNeue
+        size: 2em
+    cursor: pointer
+    &:hover
+        transform: scale(.9)
+        opacity: .8
+
+
+
+[data-animation="left"]
+    transform: translateX(-50%)
+    opacity: 0
+    transition: transform .5s , opacity .5s
+[data-animation="right"]
+    transform: translateX(50%)
+    opacity: 0 
+    transition: transform .5s , opacity .5s
+.isVisible
+    transform: translateX(0) 
+    opacity: 1
+                   
 @keyframes blink
     from
         opacity:1
