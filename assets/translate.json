@@ -1,0 +1,18 @@
+{
+    "es":{
+        "navTitle":"Contenido",
+        "navUlLi1":"Sobre Mi",
+        "navUlLi2":"Habilidades",
+        "navUlLi3":"Contacto",
+        "navUlLi4":"Proyectos"
+    },
+    "en":{
+        "navTitle":"Content",
+        "navUlLi1":"About me",
+        "navUlLi2":"Abilities",
+        "navUlLi3":"Contact",
+        "navUlLi4":"Projects"
+    }
+        
+    
+}
