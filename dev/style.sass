@@ -19,6 +19,10 @@ $hexaPath : polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
     flex-flow: column wrap
 *,*::after,*::before
     box-sizing: border-box
+body , html
+    position: relative
+    overflow-x: hidden
+    scroll-behavior: smooth
 body
     width: 100vw
     min-height: 100vh
@@ -26,6 +30,31 @@ body
     background-color: map.get($mainColors,"lightDark")
     font-family: $ptSans
     overflow-x: hidden
+
+
+    // GENERAL STYLES
+.pageTitle
+    position: relative
+    font:
+        family: $bebasNeue
+        size: 3rem
+    color: #fff
+    letter-spacing: .2rem
+    &::before
+        content:''
+        position: absolute
+        left: -.5rem
+        display: inline-block
+        width: 5px
+        height:80%
+        background-color: map.get($mainColors, "jsYellow")
+.pageText
+    color: #fff
+    font:
+        family: $ptSans
+        size: 1.3rem
+/* Page header styles and animations*/
+
 
 .pageHeader
     width: 100%
@@ -108,42 +137,21 @@ body
     @extend %flexColumnLayout
     position: relative
     width: 100%
-    &--title
-        position: relative
-        font:
-            family: $bebasNeue
-            size: 3rem
-        color: #fff
-        letter-spacing: .2rem
-        &::before
-            content:''
-            position: absolute
-            left: -.5rem
-            display: inline-block
-            width: 5px
-            height:80%
-            background-color: map.get($mainColors, "jsYellow")
     &--wrapper1
         @extend %ulWrapper
         justify-content: space-evenly
     &--wrapper2
         @extend %ulWrapper
         justify-content: center
-.orange
-    background-color: map.get($mainColors,"htmlOrange")
-.blue
-    background-color: map.get($mainColors,"cssBlue")
-.yellow
-    background-color: map.get($mainColors,"jsYellow")
-.pink
-    background-color: map.get($mainColors,"sassPink")
  
 .pageHeader__nav--ul__li
-    @extend %flexRowLayout
+    position: relative
     width: 18rem
     height: 18rem
     margin:0
+    background-color: map.get($mainColors,"htmlOrange")
     clip-path: $hexaPath
+    transform: translateZ(0)
     list-style: none
     font:
         family: $bebasNeue
@@ -152,11 +160,28 @@ body
     &:hover
         transform: scale(.9)
         opacity: .8
+    & a
+        @extend %flexColumnLayout
+        position: absolute
+        top: 5px
+        left: 5px
+        width: calc(100% - 10px)
+        height: calc(100% - 10px)
+        clip-path: $hexaPath
+        transform: translateZ(0)
+        text-decoration: none
+        background-color: #4f4e4e
+        color: #fff 
+        transition:  background-color .5s
+        &:hover
+            background-color: map.get($mainColors, "jsYellow")
+.pageHeader__nav--ul__li--img
+    width:30%
 
 
 
 [data-animation="left"]
-    transform: translateX(-50%)
+    transform: translateX(-50%) 
     opacity: 0
     transition: transform .5s , opacity .5s
 [data-animation="right"]
@@ -186,3 +211,22 @@ body
     .pageHeader__bottom--animateWrapper__title
         font-size:3rem
 
+
+
+    // Page main styles
+
+.pageMainContent
+    width:100%
+    margin-top: 5rem
+    &__about
+        width: 100%
+        @extend %flexColumnLayout
+        &--wrapper
+            @extend %flexRowLayout
+            width: 100%
+            &__img
+                width:20rem
+                margin:5rem
+            &__content
+                width: max(30% , 20rem)
+                margin:5rem

@@ -26,17 +26,47 @@
             </div>
         </div>
         <nav class="pageHeader__nav">
-            <h2 class="pageHeader__nav--title" data-text="navTitle">CONTENT</h2>
+            <h2 class="pageTitle" data-text="navTitle">CONTENT</h2>
             <ul class="pageHeader__nav--wrapper1">
-                <li class="pageHeader__nav--ul__li orange" data-text="navUlLi1" data-animation="left">About Me</li>
-                <li class="pageHeader__nav--ul__li yellow" data-text="navUlLi2" data-animation="right">Abilities</li>
+                <li class="pageHeader__nav--ul__li orange" data-animation="left">
+                    <a href="#about">
+                    <img src="assets/person-svgrepo-com.svg" alt="about me" class="pageHeader__nav--ul__li--img">
+                    <p  data-text="navUlLi1">About Me</p>
+                    </a>
+                </li>
+                    <li class="pageHeader__nav--ul__li yellow"  data-animation="right">
+                        <a href="#">
+                            <img src="assets/hammer-svgrepo-com.svg" alt="abilities" class="pageHeader__nav--ul__li--img">
+                            <p data-text="navUlLi2">Abilities</p>
+                        </a>
+                    </li>
             </ul>
             <ul class="pageHeader__nav--wrapper2">
-                <li class="pageHeader__nav--ul__li blue" data-text="navUlLi3" data-animation="left">Contact</li>
-                <li class="pageHeader__nav--ul__li pink" data-text="navUlLi4" data-animation="right">Projects</li>
+                <li class="pageHeader__nav--ul__li blue"  data-animation="left">
+                    <a href="#">
+                        <img src="assets/mail-svgrepo-com.svg" alt="contact" class="pageHeader__nav--ul__li--img">
+                        <p data-text="navUlLi3">Contact</p>
+                    </a>
+                </li>
+                <li class="pageHeader__nav--ul__li pink" data-animation="right">
+                    <a href="#">
+                        <img src="assets/work-bag-svgrepo-com.svg" alt="about me" class="pageHeader__nav--ul__li--img">
+                        <p data-text="navUlLi4">Projects</p>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
+
+    <main class="pageMainContent">
+        <section class="pageMainContent__about">
+            <h2 class="pageTitle" id="about" data-text="aboutTitle">About me</h2>
+            <div class="pageMainContent__about--wrapper">
+                <img class="pageMainContent__about--wrapper__img" alt="jlopimage" src="assets/jlop-logo-circle.png" data-animation="left">
+                <p class="pageMainContent__about--wrapper__content pageText" data-text="aboutContent" data-animation="right">Hi, my name is jlopcun,but you can call me jlop.I’ve been learning about frontend web development since June 2021, and in this time, I have colaborated with other developers, improving my skills and been a better developer day after day.I am from Spain but, as you can see, I don’t have any problem in speaking English.</p>
+            </div>
+        </section>
+    </main>
     <script src="public/main.js" type="module"></script>
 </body>
 </html>
