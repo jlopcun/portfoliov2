@@ -6,7 +6,8 @@
         "navUlLi3":"Contacto",
         "navUlLi4":"Proyectos",
         "aboutTitle":"Sobre mi",
-        "aboutContent":"Hola, mi nombre es jlopcun, pero puedes llamarme jlop. Llevo aprendiendo sobre desarrollo web frontend desde junio de 2021 y, en este tiempo, he colaborado con otros desarrolladores, mejorando mis habilidades y siendo un mejor desarrollador día tras día.Soy de España pero, como puedes ver, no tengo ningún problema en hablar inglés."
+        "aboutContent":"Hola, mi nombre es jlopcun, pero puedes llamarme jlop. Llevo aprendiendo sobre desarrollo web frontend desde junio de 2021 y, en este tiempo, he colaborado con otros desarrolladores, mejorando mis habilidades y siendo un mejor desarrollador día tras día.Soy de España pero, como puedes ver, no tengo ningún problema en hablar inglés.",
+        "abilitiesTitle":"Habilidades"
     },
     "en":{
         "navTitle":"Content",
@@ -15,7 +16,8 @@
         "navUlLi3":"Contact",
         "navUlLi4":"Projects",
         "aboutTitle":"About me",
-        "aboutContent":"Hi, my name is jlopcun,but you can call me jlop.I’ve been learning about frontend web development since June 2021, and in this time, I have colaborated with other developers, improving my skills and been a better developer day after day.I am from Spain but, as you can see, I don’t have any problem in speaking English."
+        "aboutContent":"Hi, my name is jlopcun,but you can call me jlop.I’ve been learning about frontend web development since June 2021, and in this time, I have colaborated with other developers, improving my skills and been a better developer day after day.I am from Spain but, as you can see, I don’t have any problem in speaking English.",
+        "abilitiesTitle":"Abilities"
     }
         
     

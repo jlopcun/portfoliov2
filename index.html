@@ -35,7 +35,7 @@
                     </a>
                 </li>
                     <li class="pageHeader__nav--ul__li yellow"  data-animation="right">
-                        <a href="#">
+                        <a href="#abilities">
                             <img src="assets/hammer-svgrepo-com.svg" alt="abilities" class="pageHeader__nav--ul__li--img">
                             <p data-text="navUlLi2">Abilities</p>
                         </a>
@@ -62,9 +62,54 @@
         <section class="pageMainContent__about">
             <h2 class="pageTitle" id="about" data-text="aboutTitle">About me</h2>
             <div class="pageMainContent__about--wrapper">
-                <img class="pageMainContent__about--wrapper__img" alt="jlopimage" src="assets/jlop-logo-circle.png" data-animation="left">
+                <div class="pageMainContent__about--wrapper__imageWrapper"  data-animation="left">
+                    <img class="pageMainContent__about--wrapper__imageWrapper--img" alt="jlopimage" src="assets/jlop-logo-circle.png">
+                </div>
                 <p class="pageMainContent__about--wrapper__content pageText" data-text="aboutContent" data-animation="right">Hi, my name is jlopcun,but you can call me jlop.I’ve been learning about frontend web development since June 2021, and in this time, I have colaborated with other developers, improving my skills and been a better developer day after day.I am from Spain but, as you can see, I don’t have any problem in speaking English.</p>
             </div>
+        </section>
+        <section class="pageMainContent__abilities">
+            <h2 class="pageTitle" id="abilities" data-text="abilitiesTitle">Abilities</h2>
+            <article class="pageMainContent__abilities--skill">
+                <div class="pageMainContent__abilities--skill__logo" data-animation="left">
+                    <img src="assets/html-5.webp" alt="html5 logo" class="pageMainContent__abilities--skill__logo--image">
+                    <p class="pageMainContent__abilities--skill__logo--name pageSubtitle">HTML</p>
+                </div>
+                <div class="pageMainContent__abilities--skill__graph" data-animation="right">
+                    <div class="pageMainContent__abilities--skill__graph--bar html"></div>
+                    <p class="pageMainContent__abilities--skill__graph--percent pageText">90%</p>
+                </div>
+            </article>
+            <article class="pageMainContent__abilities--skill">
+                <div class="pageMainContent__abilities--skill__logo" data-animation="left">
+                    <img src="assets/css-3.webp" alt="css3 logo" class="pageMainContent__abilities--skill__logo--image">
+                    <p class="pageMainContent__abilities--skill__logo--name pageSubtitle">CSS</p>
+                </div>
+                <div class="pageMainContent__abilities--skill__graph"  data-animation="right">
+                    <div class="pageMainContent__abilities--skill__graph--bar css"></div>
+                    <p class="pageMainContent__abilities--skill__graph--percent pageText">70%</p>
+                </div>
+            </article>
+            <article class="pageMainContent__abilities--skill">
+                <div class="pageMainContent__abilities--skill__logo" data-animation="left">
+                    <img src="assets/js.webp" alt="js logo" class="pageMainContent__abilities--skill__logo--image">
+                    <p class="pageMainContent__abilities--skill__logo--name pageSubtitle">JavaScript</p>
+                </div>
+                <div class="pageMainContent__abilities--skill__graph"  data-animation="right">
+                    <div class="pageMainContent__abilities--skill__graph--bar js"></div>
+                    <p class="pageMainContent__abilities--skill__graph--percent pageText">50%</p>
+                </div>
+            </article>
+            <article class="pageMainContent__abilities--skill">
+                <div class="pageMainContent__abilities--skill__logo" data-animation="left">
+                    <img src="assets/377-3772047_sass-logo-removebg-preview.webp" alt="sass logo" class="pageMainContent__abilities--skill__logo--image">
+                    <p class="pageMainContent__abilities--skill__logo--name pageSubtitle">Sass</p>
+                </div>
+                <div class="pageMainContent__abilities--skill__graph"  data-animation="right">
+                    <div class="pageMainContent__abilities--skill__graph--bar sass"></div>
+                    <p class="pageMainContent__abilities--skill__graph--percent pageText">10%</p>
+                </div>
+            </article>
         </section>
     </main>
     <script src="public/main.js" type="module"></script>
