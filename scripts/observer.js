@@ -10,7 +10,7 @@ const observerAnimations = () =>{
     }
     
     const elementsToAnimate = document.querySelectorAll('[data-animation]'),
-    observer = new IntersectionObserver(cb,{threshold:.4});
+    observer = new IntersectionObserver(cb,{threshold:.2});
 
     elementsToAnimate.forEach(el=>observer.observe(el));
 
