@@ -47,7 +47,7 @@
             </ul>
             <ul class="pageHeader__nav--wrapper2">
                 <li class="pageHeader__nav--ul__li blue"  data-animation="left">
-                    <a href="#">
+                    <a href="#contact">
                         <img src="assets/mail-svgrepo-com.svg" alt="contact" class="pageHeader__nav--ul__li--img">
                         <p data-text="navUlLi3">Contact</p>
                     </a>
@@ -116,21 +116,28 @@
             </article>
         </section>
     </main>
-    <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          ...
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
-    <script src="public/main.js" type="module"></script>
+    <section class="contact">
+        <h2 class="pageTitle" data-text="navUlLi3" id="contact">Contacto</h2>
+        <form class="contact__form" id="contactForm">
+            <fieldset class="contact__form--wr">
+                <input  data-analit type="text" name="name" class="contact__form--field" autocomplete="off" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" required title="el nombre solo puede incluir letras y espacios">
+                <label for="name" data-text="form__name" class="form__label">Nombre</label>
+            </fieldset>
+            <fieldset class="contact__form--wr">
+                <input data-analit type="email" name="email" class="contact__form--field" autocomplete="off" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required title="el email ingresado no es válido">
+                <label for="email" data-text="form__email" class="form__label">Email</label>
+            </fieldset>
+            <fieldset class="contact__form--wr">
+                <input type="text" name="subject" class="contact__form--field" autocomplete="off">
+                <label for="subject" data-text="form__subject" class="form__label">Asunto</label>
+            </fieldset>
+            <fieldset class="contact__form--wr">
+                <textarea name="content" class="contact__form--textArea" autocomplete="off"></textarea>
+                <label for="name" data-text="form__content" class="form__label">Mensaje</label>
+            </fieldset>
+            <input type="submit" value="submit" class="form__submit">
+        </form>
+    </section>
+    <script src="scripts/main.js" type="module"></script>
 </body>
 </html>

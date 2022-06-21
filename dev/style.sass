@@ -299,17 +299,83 @@ body
                 border-radius: 30px
                 background-color: #fff
                 overflow: hidden
-.swiper
-    width: max(30%,20rem)
-    height: 30rem
-    &-slide
-        width:100%
-        background-color: #fff
-        text-align: center
-        padding-top:2rem
-        font:
-            font-family: $ptSans
-            size:5rem
-        
-                        
-        
+
+
+    // CONTACT FORM STYLES
+fieldset
+    border: none
+@mixin flex($direction,$wrap,$justify,$align)
+    display: flex
+    flex-flow: $direction $wrap
+    justify-content: $justify
+    align-items: $align
+
+.contact
+    @include flex(column,wrap,space-around,center)
+    width: 100%
+    margin-bottom:10rem
+.contact__form
+    @include flex(column,wrap,space-around,center)
+    font-family: sans-serif
+    font-weight: bold
+    gap:1rem
+    width: min(100%,50rem)
+    &--field
+        width: 80%
+        padding:.7rem 1.4rem
+        outline: none
+        font-family: sans-serif
+        font-weight: bold
+        border-radius:10px
+        border: none
+        box-shadow: 0 15px 50px rgba( 255 223 0 /.2)
+    &--textArea
+        width: 80%
+        height:15rem
+        resize: none
+        font-family: sans-serif
+        font-weight: bold
+        border-radius:10px
+        border: none
+        box-shadow: 0 15px 50px rgba( 255 223 0 /.2)
+        padding:1rem
+        outline: none
+.form__label
+    color:#fff
+    align-self: flex-start
+    margin-left:10%
+    order:-1
+.contact__form--field[required]:invalid
+    border:2px solid red
+.contact__form--field[required]:invalid ~ .form__label
+    color: red
+.contact__form--field[required]:valid
+    border:2px solid lime
+.contact__form--field[required]:valid ~ .form__label
+    color: lime
+.contact__form--wr
+    @include flex(column,wrap,center,center)
+    gap:.3rem
+    width: 100%
+.form__submit
+    border: none
+    background-color: map.get($mainColors,'jsYellow')
+    font-family: $bebasNeue
+    font-size:1.2em
+    padding:.7rem 1.4rem
+    border-radius: 10px
+    text-transform: uppercase
+    align-self: flex-end
+    margin-right:10%
+    cursor: pointer
+    &:hover
+        opacity:.8
+.inputFieldWrong
+    width:80%
+    background-color: red
+    padding: calc(1rem + 10px) 2rem 1rem
+    text-transform: uppercase
+    color:#fff
+    border-radius:10px
+    margin-top:-20px
+    z-index:-1
