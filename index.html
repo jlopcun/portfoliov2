@@ -117,25 +117,25 @@
         </section>
     </main>
     <section class="contact">
-        <h2 class="pageTitle" data-text="navUlLi3" id="contact">Contacto</h2>
+        <h2 class="pageTitle" data-text="navUlLi3" id="contact">Contact</h2>
         <form class="contact__form" id="contactForm">
             <fieldset class="contact__form--wr">
-                <input  data-analit type="text" name="name" class="contact__form--field" autocomplete="off" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" required title="el nombre solo puede incluir letras y espacios">
-                <label for="name" data-text="form__name" class="form__label">Nombre</label>
+                <input  data-analit type="text" name="name" class="contact__form--field" autocomplete="off" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" required title="name can only contain letters and spaces" data-text="form__name--input">
+                <label for="name" data-text="form__name" class="form__label">Name</label>
             </fieldset>
             <fieldset class="contact__form--wr">
-                <input data-analit type="email" name="email" class="contact__form--field" autocomplete="off" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required title="el email ingresado no es válido">
+                <input data-analit type="email" name="email" class="contact__form--field" autocomplete="off" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required title="not a valid email" data-text="form__email--input">
                 <label for="email" data-text="form__email" class="form__label">Email</label>
             </fieldset>
             <fieldset class="contact__form--wr">
                 <input type="text" name="subject" class="contact__form--field" autocomplete="off">
-                <label for="subject" data-text="form__subject" class="form__label">Asunto</label>
+                <label for="subject" data-text="form__subject" class="form__label">Subject</label>
             </fieldset>
             <fieldset class="contact__form--wr">
                 <textarea name="content" class="contact__form--textArea" autocomplete="off"></textarea>
-                <label for="name" data-text="form__content" class="form__label">Mensaje</label>
+                <label for="name" data-text="form__content" class="form__label">Message</label>
             </fieldset>
-            <input type="submit" value="submit" class="form__submit">
+            <input type="submit" data-text="form__submit" value="submit" class="form__submit">
         </form>
     </section>
     <script src="scripts/main.js" type="module"></script>

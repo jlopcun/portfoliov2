@@ -7,7 +7,16 @@
         "navUlLi4":"Proyectos",
         "aboutTitle":"Sobre mi",
         "aboutContent":"Hola, mi nombre es jlopcun, pero puedes llamarme jlop. Llevo aprendiendo sobre desarrollo web frontend desde junio de 2021 y, en este tiempo, he colaborado con otros desarrolladores, mejorando mis habilidades y siendo un mejor desarrollador día tras día.Soy de España pero, como puedes ver, no tengo ningún problema en hablar inglés.",
-        "abilitiesTitle":"Habilidades"
+        "abilitiesTitle":"Habilidades",
+        "form__name":"Nombre",
+        "form__email":"Email",
+        "form__subject":"Asunto",
+        "form__content":"Mensaje",
+        "form__submit":"Enviar",
+        "form__name--input":"el nombre solo puede incluir letras y espacios",
+        "form__email--input":"el email ingresado no es válido",
+        "form__name--alert":"el nombre solo puede incluir letras y espacios",
+        "form__email--alert":"el email ingresado no es válido"
 
     },
     "en":{
@@ -18,7 +27,16 @@
         "navUlLi4":"Projects",
         "aboutTitle":"About me",
         "aboutContent":"Hi, my name is jlopcun,but you can call me jlop.I’ve been learning about frontend web development since June 2021, and in this time, I have colaborated with other developers, improving my skills and been a better developer day after day.I am from Spain but, as you can see, I don’t have any problem in speaking English.",
-        "abilitiesTitle":"Abilities"
+        "abilitiesTitle":"Abilities",
+        "form__name":"Name",
+        "form__email":"Email",
+        "form__subject":"Subject",
+        "form__content":"Message",
+        "form__submit":"Submit",
+        "form__name--input":"name can only contain letters and spaces",
+        "form__email--input":"not a valid email",
+        "form__name--alert":"name can only contain letters and spaces",
+        "form__email--alert":"not a valid email"
         
     }
         

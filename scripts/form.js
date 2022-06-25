@@ -6,6 +6,7 @@ function validateForm(form){
        span.classList.add('inputFieldWrong')
        span.textContent = el.title
        span.dataset.from = el.name
+       span.dataset.text = `form__${el.name}--alert`
        el.insertAdjacentElement('afterend',span)
        }
        else if(new RegExp(el.pattern).test(el.value) && form.querySelector(`[data-from=${el.name}`)) form.querySelector(`[data-from=${el.name}`).remove()
