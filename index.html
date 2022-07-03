@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="jlopcuns">
+    <meta name="description" content="hello,Im jlopcuns, a junior frontend developer and here it is my portfolio website">
+    <meta name="keywords" content="web frontend developer html css javascript">
+    <meta name="robots" content="index">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet"> 
@@ -19,8 +23,8 @@
         <div class="pageHeader__top">
             <h1 class="pageHeader__top--title" data-animation="left">Jlopcuns</h1>
             <div class="pageHeader__top--lang" id="langChanger" data-animation="left">
-                <img src="assets/spain.webp" alt="spainLogo" class="pageHeader__top--lang__icon" data-lang="es">
-                <img src="assets/united-kingdom.webp" alt="unitedKingdomLogo" class="pageHeader__top--lang__icon" data-lang="en">
+                <button class="changeLangButton"><img src="assets/spain.webp" alt="spainLogo" class="pageHeader__top--lang__icon" data-lang="es" aria-label="spanish"></button>
+                <button class="changeLangButton" ><img src="assets/united-kingdom.webp" alt="unitedKingdomLogo" class="pageHeader__top--lang__icon" data-lang="en" aria-label="english"></button>
             </div>
         </div>
         <div class="pageHeader__bottom" id="pageHeader__bottom">
@@ -30,84 +34,92 @@
             </div>
         </div>
         <nav class="pageHeader__nav">
-            <h2 class="pageTitle" data-text="navTitle">CONTENT</h2>
+            <h2 class="pageTitle" data-text="navTitle" >CONTENT</h2>
             <ul class="pageHeader__nav--wrapper1">
                 <li class="pageHeader__nav--ul__li orange" data-animation="left">
-                    <a href="#about">
-                    <img src="assets/person-svgrepo-com.svg" alt="about me" class="pageHeader__nav--ul__li--img">
-                    <p  data-text="navUlLi1">About Me</p>
-                    </a>
+                    
+                        <a href="#about">
+                            <img src="assets/person-svgrepo-com.svg" alt="about me" class="pageHeader__nav--ul__li--img">
+                            <p  data-text="navUlLi1">About Me</p>
+                        </a>
+                    
                 </li>
                     <li class="pageHeader__nav--ul__li yellow"  data-animation="right">
+                
                         <a href="#abilities">
                             <img src="assets/hammer-svgrepo-com.svg" alt="abilities" class="pageHeader__nav--ul__li--img">
                             <p data-text="navUlLi2">Abilities</p>
                         </a>
+                      
                     </li>
             </ul>
             <ul class="pageHeader__nav--wrapper2">
                 <li class="pageHeader__nav--ul__li blue"  data-animation="left">
-                    <a href="#contact">
-                        <img src="assets/mail-svgrepo-com.svg" alt="contact" class="pageHeader__nav--ul__li--img">
-                        <p data-text="navUlLi3">Contact</p>
-                    </a>
+                    
+                        <a href="#contact">
+                            <img src="assets/mail-svgrepo-com.svg" alt="contact" class="pageHeader__nav--ul__li--img">
+                            <p data-text="navUlLi3">Contact</p>
+                        </a>
+                    
                 </li>
                 <li class="pageHeader__nav--ul__li pink" data-animation="right">
-                    <a href="#">
-                        <img src="assets/work-bag-svgrepo-com.svg" alt="about me" class="pageHeader__nav--ul__li--img">
-                        <p data-text="navUlLi4">Projects</p>
-                    </a>
+                    
+                        <a href="#">
+                            <img src="assets/work-bag-svgrepo-com.svg" alt="about me" class="pageHeader__nav--ul__li--img">
+                            <p data-text="navUlLi4" >Projects</p>
+                        </a>
+                   
                 </li>
             </ul>
         </nav>
     </header>
 
     <main class="pageMainContent">
-        <section class="pageMainContent__about">
+        <section class="pageMainContent__about" aria-labelledby="about" tabindex="0" >
             <h2 class="pageTitle" id="about" data-text="aboutTitle">About me</h2>
-            <div class="pageMainContent__about--wrapper">
+            <div class="pageMainContent__about--wrapper" >
                 <div class="pageMainContent__about--wrapper__imageWrapper"  data-animation="left">
                     <img class="pageMainContent__about--wrapper__imageWrapper--img" alt="jlopimage" src="assets/jlop-logo-circle.png">
                 </div>
-                <p class="pageMainContent__about--wrapper__content pageText" data-text="aboutContent" data-animation="right">Hi, my name is jlopcun,but you can call me jlop.I’ve been learning about frontend web development since June 2021, and in this time, I have colaborated with other developers, improving my skills and been a better developer day after day.I am from Spain but, as you can see, I don’t have any problem in speaking English.</p>
+                <p class="pageMainContent__about--wrapper__content pageText" data-text="aboutContent" data-animation="right" tabindex="0">Hi, my name is jlopcun,but you can call me jlop.I’ve been learning about frontend web development since June 2021, and in this time, I have colaborated with other developers, improving my skills and been a better developer day after day.I am from Spain but, as you can see, I don’t have any problem in speaking English.</p>
             </div>
         </section>
-        <section class="pageMainContent__abilities">
+        <section class="pageMainContent__abilities" aria-labelledby="abilities" tabindex="0">
             <h2 class="pageTitle" id="abilities" data-text="abilitiesTitle">Abilities</h2>
-            <article class="pageMainContent__abilities--skill">
+            <article class="pageMainContent__abilities--skill" aria-label="html,90%" tabindex="0">
                 <div class="pageMainContent__abilities--skill__logo" data-animation="left">
                     <img src="assets/html-5.webp" alt="html5 logo" class="pageMainContent__abilities--skill__logo--image">
-                    <p class="pageMainContent__abilities--skill__logo--name pageSubtitle">HTML</p>
+                    <h2 class="pageMainContent__abilities--skill__logo--name pageSubtitle" id="html">HTML</h2>
                 </div>
                 <div class="pageMainContent__abilities--skill__graph" data-animation="right">
                     <div class="pageMainContent__abilities--skill__graph--bar html"></div>
                     <p class="pageMainContent__abilities--skill__graph--percent pageText">90%</p>
                 </div>
             </article>
-            <article class="pageMainContent__abilities--skill">
+            <article class="pageMainContent__abilities--skill" aria-label="css,70%" tabindex="0">
                 <div class="pageMainContent__abilities--skill__logo" data-animation="left">
                     <img src="assets/css-3.webp" alt="css3 logo" class="pageMainContent__abilities--skill__logo--image">
-                    <p class="pageMainContent__abilities--skill__logo--name pageSubtitle">CSS</p>
+                    <h2 class="pageMainContent__abilities--skill__logo--name pageSubtitle">CSS</h2>
                 </div>
                 <div class="pageMainContent__abilities--skill__graph"  data-animation="right">
                     <div class="pageMainContent__abilities--skill__graph--bar css"></div>
                     <p class="pageMainContent__abilities--skill__graph--percent pageText">70%</p>
                 </div>
             </article>
-            <article class="pageMainContent__abilities--skill">
+            <article class="pageMainContent__abilities--skill" aria-label="javascrip,50%" tabindex="0">
                 <div class="pageMainContent__abilities--skill__logo" data-animation="left">
                     <img src="assets/js.webp" alt="js logo" class="pageMainContent__abilities--skill__logo--image">
-                    <p class="pageMainContent__abilities--skill__logo--name pageSubtitle">JavaScript</p>
+                    <h2 class="pageMainContent__abilities--skill__logo--name pageSubtitle">JavaScript</h2>
                 </div>
                 <div class="pageMainContent__abilities--skill__graph"  data-animation="right">
                     <div class="pageMainContent__abilities--skill__graph--bar js"></div>
                     <p class="pageMainContent__abilities--skill__graph--percent pageText">50%</p>
                 </div>
             </article>
-            <article class="pageMainContent__abilities--skill">
+            <article class="pageMainContent__abilities--skill" aria-label="sass,10%" tabindex="0">
                 <div class="pageMainContent__abilities--skill__logo" data-animation="left">
                     <img src="assets/377-3772047_sass-logo-removebg-preview.webp" alt="sass logo" class="pageMainContent__abilities--skill__logo--image">
-                    <p class="pageMainContent__abilities--skill__logo--name pageSubtitle">Sass</p>
+                    <h2 class="pageMainContent__abilities--skill__logo--name pageSubtitle">Sass</h2>
                 </div>
                 <div class="pageMainContent__abilities--skill__graph"  data-animation="right">
                     <div class="pageMainContent__abilities--skill__graph--bar sass"></div>
@@ -117,24 +129,24 @@
         </section>
     </main>
     <section class="contact">
-        <h2 class="pageTitle" data-text="navUlLi3" id="contact">Contact</h2>
-        <form class="contact__form" id="contactForm">
-            <fieldset class="contact__form--wr">
+        <h2 class="pageTitle" data-text="navUlLi3" id="contact" aria-label="contact" tabindex="0">Contact</h2>
+        <form class="contact__form" id="contactForm" >
+            <div class="contact__form--wr">
                 <input  data-analit type="text" name="name" class="contact__form--field" autocomplete="off" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" required title="name can only contain letters and spaces" data-text="form__name--input">
-                <label for="name" data-text="form__name" class="form__label">Name</label>
-            </fieldset>
-            <fieldset class="contact__form--wr">
+                <p  data-text="form__name" class="form__label">Name</p>
+            </div>
+            <div class="contact__form--wr">
                 <input data-analit type="email" name="email" class="contact__form--field" autocomplete="off" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required title="not a valid email" data-text="form__email--input">
-                <label for="email" data-text="form__email" class="form__label">Email</label>
-            </fieldset>
-            <fieldset class="contact__form--wr">
+                <p  data-text="form__email" class="form__label">Email</p>
+            </div>
+            <div class="contact__form--wr">
                 <input type="text" name="subject" class="contact__form--field" autocomplete="off">
-                <label for="subject" data-text="form__subject" class="form__label">Subject</label>
-            </fieldset>
-            <fieldset class="contact__form--wr">
+                <p  data-text="form__subject" class="form__label">Subject</p>
+            </div>
+            <div class="contact__form--wr">
                 <textarea name="content" class="contact__form--textArea" autocomplete="off"></textarea>
-                <label for="name" data-text="form__content" class="form__label">Message</label>
-            </fieldset>
+                <p data-text="form__content" class="form__label">Message</p>
+            </div>
             <input type="submit" data-text="form__submit" value="submit" class="form__submit">
         </form>
     </section>
